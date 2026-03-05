@@ -13,7 +13,7 @@
 #include "zengine.hpp"
 
 /* APPS */
-#include "zdev/zdev.hpp"
+#include "zdev.hpp"
 
 /* STD */
 #include <thread>
