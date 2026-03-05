@@ -6,7 +6,7 @@ ill keep the setup instructions:
 # Clone the repo:
 ```bash
 git clone --depth=1 https://github.com/ZDev22/ZDevChallenge
-cd ZEngine
+cd ZDevChallenge
 ```
 # Dependencies:
 ## LINUX:
