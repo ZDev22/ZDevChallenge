@@ -1,6 +1,6 @@
 #pragma once
 
-#define SPRITES 500
+#define SPRITES 1000
 
 #include "zengine.hpp"
 #include "deps/RGFW.h"
