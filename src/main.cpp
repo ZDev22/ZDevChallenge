@@ -8,7 +8,7 @@
 #define ZENGINE_DEPS_DEFINED
 #define ZENGINE_DISABLE_AUDIO
 #define ZENGINE_DISABLE_VSYNC
-#define ZENGINE_MAX_SPRITES 10000000
+#define ZENGINE_MAX_SPRITES 1000000
 #define ZENGINE_MAX_TEXTURES 1
 #include "zengine.hpp"
 
@@ -36,7 +36,7 @@ int main() {
     #endif
 
     /* init engine */
-    windowdata = RGFW_createWindow("zdevchallenge", 0, 0, 1920, 1080, (u64)0);
+    windowdata = RGFW_createWindow("zdevchallenge", 0, 0, 720, 480, (u64)0);
     ZEngineInit();
     Game game{camera};
 

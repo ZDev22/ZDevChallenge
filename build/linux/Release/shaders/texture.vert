@@ -10,8 +10,8 @@ struct Sprite {
     vec2 position;
     vec2 scale;
     mat2 rotationMatrix;
+    uint depth;
     uint textureIndex;
-    uint ID;
     float rotation;
 };
 
@@ -23,7 +23,7 @@ layout(push_constant) uniform PushConstants {
 layout(set = 0, binding = 0) readonly buffer SpriteDataBuffer { Sprite sprites[]; };
 
 void main() {
-    gl_Position = vec4(sprites[gl_InstanceIndex].rotationMatrix * ((inPosition * sprites[gl_InstanceIndex].scale) / camera.zoom) + ((sprites[gl_InstanceIndex].position + camera.position) / camera.zoom), 0.0, 1.0);
+    gl_Position = vec4(sprites[gl_InstanceIndex].rotationMatrix * ((inPosition * sprites[gl_InstanceIndex].scale) / camera.zoom) + ((sprites[gl_InstanceIndex].position + camera.position) / camera.zoom), 1.0 - (float(sprites[gl_InstanceIndex].depth) / 4294967295.0), 1.0);
     fragTexCoord = inTexCoord;
     fragTextureIndex = sprites[gl_InstanceIndex].textureIndex;
 }
