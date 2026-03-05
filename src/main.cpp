@@ -36,7 +36,7 @@ int main() {
     #endif
 
     /* init engine */
-    windowdata = RGFW_createWindow("zdevchallenge", 0, 0, 720, 480, (u64)0);
+    windowdata = RGFW_createWindow("zdevchallenge", 0, 0, 1920, 1080, (u64)0);
     ZEngineInit();
     Game game{camera};
 
