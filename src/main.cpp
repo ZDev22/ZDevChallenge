@@ -15,7 +15,7 @@
 /* STD */
 #include <thread>
 
-#define SPRITES 1000 /* SPRITES * SPRITES = sprites on screen*/
+#define SPRITES 500 /* SPRITES * SPRITES = sprites on screen*/
    
 /* vars for calculating fps and deltaTime */
 int fps = 0;
@@ -34,7 +34,7 @@ int main() {
     float y = -1.f;
     for (unsigned int i = 0 ; i < SPRITES; i++) {
         for (unsigned int j = 0; j < SPRITES; j++) {
-            createSprite(squareModel, 0, x, y, .1f, .1f, 0.f);
+            createSprite(squareModel, 0, x, y, .08f, .08f, 0.f);
             x += .02f;
         }
         x = -1.f;
