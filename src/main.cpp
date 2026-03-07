@@ -15,8 +15,8 @@
 /* STD */
 #include <thread>
 
-#define SPRITES 500 /* SPRITES * SPRITES = sprites on screen*/
-   
+#define SPRITES 500 /* SPRITES * SPRITES = sprites on screen */
+ 
 /* vars for calculating fps and deltaTime */
 int fps = 0;
 float appTimer = 0.f;
