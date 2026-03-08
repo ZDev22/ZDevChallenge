@@ -837,6 +837,7 @@ private:
 struct Model {
 public:
     Model(float* positions, const unsigned int verticySize) : verticySize(verticySize) { /* verticies are X and Y positions, verticy size is the size of the vector / 2 */
+        ZEngineUpdateSpriteMap = true;
         vertices = new Vertex[verticySize];
 
         unsigned int index = 0;
