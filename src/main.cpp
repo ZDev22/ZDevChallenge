@@ -5,6 +5,8 @@
 
 /* ZENGINE */
 #define ZENGINE_IMPLEMENTATION
+#define ZENGINE_FORCE_SHADER_RECOMPILATION
+#define ZENGINE_SPRITE_MAPMODE_MANUAL
 #define ZENGINE_DEPS_DEFINED
 #define ZENGINE_DISABLE_AUDIO
 #define ZENGINE_DISABLE_VSYNC
@@ -15,7 +17,7 @@
 /* STD */
 #include <thread>
 
-#define SPRITES 500 /* SPRITES * SPRITES = sprites on screen */
+#define SPRITES 1000 /* SPRITES * SPRITES = sprites on screen */
  
 /* vars for calculating fps and deltaTime */
 int fps = 0;
