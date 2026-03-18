@@ -1,4 +1,4 @@
-#version 450
+#version 460
 
 layout(location = 0) in vec2 inPosition;
 layout(location = 1) in vec2 inTexCoord;
@@ -18,6 +18,7 @@ struct Sprite {
 layout(push_constant) uniform Push {
     vec2 position;
     vec2 zoom;
+    float aspect;
 } camera;
 
 layout(set = 0, binding = 0) readonly buffer SpriteData { Sprite sprites[]; };

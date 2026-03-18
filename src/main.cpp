@@ -7,6 +7,7 @@
 #define ZENGINE_IMPLEMENTATION
 #define ZENGINE_FORCE_SHADER_RECOMPILATION
 #define ZENGINE_SPRITE_MAPMODE_MANUAL
+#define ZENGINE_SPRITE_MATRIXMODE_MANUAL
 #define ZENGINE_DEPS_DEFINED
 #define ZENGINE_DISABLE_AUDIO
 #define ZENGINE_DISABLE_VSYNC
@@ -37,6 +38,7 @@ int main() {
     for (unsigned int i = 0 ; i < SPRITES; i++) {
         for (unsigned int j = 0; j < SPRITES; j++) {
             createSprite(squareModel, 0, x, y, .08f, .08f, 0.f);
+            sprites[spritesSize - 1].setRotationMatrix();
             x += .02f;
         }
         x = -1.f;
