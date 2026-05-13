@@ -25,6 +25,7 @@ layout(set = 0, binding = 0) readonly buffer SpriteData { Sprite sprites[]; };
 
 void main() {
     gl_Position = vec4(sprites[gl_InstanceIndex].rotationMatrix * ((inPosition * sprites[gl_InstanceIndex].scale) / camera.zoom) + ((sprites[gl_InstanceIndex].position + camera.position) / camera.zoom), sprites[gl_InstanceIndex].depth, 1.0);
+    gl_Position[0] /= camera.aspect;
     fragTexCoord = inTexCoord;
     fragTextureIndex = sprites[gl_InstanceIndex].textureIndex;
 }
